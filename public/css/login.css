@@ -1,0 +1,86 @@
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/your_illustration.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+    font-weight: 600;
+}
+.form-control {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 12px;
+    height: auto;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.form-control:focus {
+    background: #fff;
+    border-color: #F9C416;
+    box-shadow: 0 0 0 0.2rem rgba(249, 196, 22, 0.25);
+}
+.btn-login {
+    background-color: #F9C416;
+    color: #2E2B14;
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    width: 100%;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+.btn-login:hover {
+    background-color: #e0b014;
+    transform: translateY(-1px);
+}
+.form-label {
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+.alert {
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+.brand-logo {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.brand-logo img {
+    max-width: 120px;
+    height: auto;
+}
+@media (max-width: 576px) {
+    .login-container {
+        margin: 15px;
+        padding: 1.5rem;
+    }
+}

@@ -1,0 +1,194 @@
+.navbar {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/assets/your_illustration.png") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  padding: 10px;
+  height: 7vh;
+}
+
+.navbar .dashboard-text {
+  font-size: 3vh;
+  color: #ffff;
+  font-weight: bold;
+  padding-top: 10px;
+  text-decoration: none;
+  transition: color 0.3s, background-color 0.3s;
+  margin-top: -10px;
+  padding-left: 190px;
+  transition: padding-left 0.3s;
+}
+
+.navbar .profile {
+  position: relative;
+  margin-left: auto;
+  z-index: 1060;
+  margin-top: -5px;
+}
+
+.navbar .profile .dropdown-menu {
+  position: absolute;
+  right: 0;
+  left: auto;
+  top: 100%;
+  transform: none;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1060;
+  min-width: 160px;
+}
+
+.navbar .profile .dropdown-menu.show {
+  display: block;
+}
+
+.navbar .profile img {
+  cursor: pointer;
+  height: 5vh;
+  width: auto;
+  vertical-align: middle;
+}
+
+.navbar .profile .dropdown-menu a {
+  padding: 8px 16px;
+  color: #333;
+  display: block;
+  text-decoration: none;
+}
+
+.navbar .profile .dropdown-menu a:hover {
+  background-color: #f8f9fa;
+}
+
+#map {
+  height: 500px;
+  width: 100%;
+  background-color: #e9ecef;
+  border: 1px solid #ddd;
+}
+
+.text-center {
+  font-weight: bolder;
+  font-size: 28px;
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
+
+/* Styling untuk container */
+.container.mt-4 {
+  padding: 20px;
+  max-width: 2400px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure smooth transitions */
+.main-content,
+.navbar,
+.container,
+.sidebar,
+.map {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Fix map container */
+.map {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 180px);
+  min-height: 400px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+/* Improve text readability */
+.text-center {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  margin: 0 auto 15px;
+  max-width: 90%;
+}
+
+/* Mobile toggle button */
+.toggle-btn {
+  z-index: 1040;
+  align-items: center !important;
+  vertical-align: middle !important;
+}
+
+/* Perbaiki dropdown profile */
+.navbar .profile {
+  position: relative;
+  margin-left: auto;
+  z-index: 1060;
+}
+
+.navbar .profile .dropdown-menu {
+  position: absolute;
+  right: 0;
+  left: auto;
+  top: 100%;
+  transform: none;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1060;
+  min-width: 160px;
+}
+
+.navbar .profile .dropdown-menu a {
+  padding: 8px 16px;
+  color: #333;
+  display: block;
+  text-decoration: none;
+}
+
+.navbar .profile .dropdown-menu a:hover {
+  background-color: #f8f9fa;
+}
+
+.mr-3 {
+  font-size: 2vh;
+  color: #ffff;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.mr-3,
+.mx-3 {
+  margin-right: 2vh !important;
+}
+
+.menu-burger-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  a.dashboard-text {
+    padding-left: 30px;
+  }
+}
+
+.container-fluid.mt-4 {
+  padding: 0px !important;
+  margin: 0px !important;
+}

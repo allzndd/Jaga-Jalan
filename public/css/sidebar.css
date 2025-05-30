@@ -1,0 +1,236 @@
+.sidebar {
+  height: 100%;
+  width: 220px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  padding-top: 20px;
+  border-right: 1px solid #ddd;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-weight: bold;
+  overflow: hidden;
+  z-index: 1000;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.sidebar.collapsed {
+  width: 0px;
+}
+
+.sidebar a,
+.sidebar .menu-text {
+  width: 170px;
+  display: block;
+  padding: 15px;
+  color: black;
+  text-decoration: none;
+  margin: 10px 20px;
+  border-radius: 10px;
+  margin-left: 25px;
+  transition: opacity 0.3s, background-color 0.3s, color 0.3s, transform 0.3s;
+  transform: translateX(-30px);
+}
+
+.sidebar.collapsed a,
+.sidebar.collapsed .menu-text {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: ease-in-out 0.3s;
+}
+
+.sidebar:not(.collapsed) a,
+.sidebar:not(.collapsed) .menu-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sidebar a:hover {
+  background-color: #ddd;
+}
+
+.sidebar a.active {
+  background-color: #ddd;
+}
+
+.no-select {
+  user-select: none;
+  pointer-events: none;
+}
+
+.no-select a {
+  pointer-events: auto;
+}
+
+.submenu {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  margin-left: 35px;
+  font-weight: lighter;
+  font-size: 13px;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.submenupemetaan #pemetaan-menu1 {
+  margin-left: 55px;
+  font-weight: lighter;
+  font-size: 13px;
+  text-align: left;
+  max-width: 140px;
+  background-color: #ddd;
+}
+
+.submenupemetaan #pemetaan-menu2 {
+  margin-left: 55px;
+  font-weight: lighter;
+  font-size: 13px;
+  text-align: left;
+  max-width: 140px;
+}
+
+.submenupemetaan #pemetaan-menu2:hover {
+  background-color: #ddd;
+  width: 140px;
+}
+
+.submenu.show {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.submenu.hide {
+  max-height: 0;
+  opacity: 0;
+}
+
+.submenu a {
+  transition: background-color 0.3s, color 0.3s;
+  margin: 5px 20px;
+  text-align: left;
+  max-width: 140px;
+}
+
+.submenu a:hover {
+  background-color: #ddd;
+  width: 140px;
+}
+
+.sidebar a img.icon {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 5px;
+}
+
+.sidebar #dashboard-no-select {
+  background-color: white;
+  margin-right: 10px;
+  width: 170px;
+  height: 55px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-left: 25px;
+}
+
+.sidebar #dashboard-no-select img.home {
+  margin-left: 5px;
+}
+
+.sidebar #dashboard-no-select:hover {
+  background-color: #ddd;
+  margin-left: 25px;
+}
+.sidebar #dashboard-menu .home {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.sidebar #dashboard-no-select .home {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.sidebar #map-menu1 {
+  background-color: #f9c416;
+  color: white;
+  margin-right: 10px;
+  width: 170px;
+  height: 55px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-left: 25px;
+}
+
+.sidebar #map-menu1 .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.sidebar #map-menu .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.sidebar .menu-text {
+  color: black;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+.sidebar .toggle-btn {
+  color: #f9c416;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sidebar .toggle-btn:hover {
+  background-color: #ddd;
+  border-radius: 50%;
+  border-width: 8px;
+}
+
+.submenu a {
+  margin: 5px 20px;
+  text-align: left;
+}
+
+.submenu a.active {
+  color: #000000;
+  background-color: #ddd;
+}
+
+@media (max-width: 768px) {
+  .sidebar.collapsed {
+    width: 0px;
+  }
+  main.grow {
+    padding-left: 0px;
+  }
+  .navbar .dashboard-text {
+    padding-left: 20px !important;
+    font-size: 20px !important;
+  }
+  .profile .mr-3 {
+    display: none;
+  }
+  .profile img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}

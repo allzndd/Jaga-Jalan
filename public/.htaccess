@@ -1,0 +1,25 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} . 
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # Ensure the request is not for an existing file or directory
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+
+    # Redirect all requests to index.php
+    RewriteRule ^ index.php [QSA,L]
+
+    # Allow CORS (Opsional, jika API diakses dari domain lain)
+    <IfModule mod_headers.c>
+        Header Set Access-Control-Allow-Origin "*"
+        Header Set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+        Header Set Access-Control-Allow-Headers "Content-Type, Authorization"
+    </IfModule>
+</IfModule>
